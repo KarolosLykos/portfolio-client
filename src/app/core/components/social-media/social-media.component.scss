@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+.social-media-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  width: 89%;
+
+  a {
+    color: $navbar-text-color;
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in;
+    cursor: pointer;
+    fa-icon {
+      margin: 2px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

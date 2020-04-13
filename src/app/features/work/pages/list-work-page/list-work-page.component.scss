@@ -1,0 +1,50 @@
+@import "../../../../../styles/variables";
+@import "../../../../../styles/mixins";
+
+.work-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .work-item {
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 10px;
+    @include breakpoint(d) { flex-basis: 30%;}
+    @include breakpoint(l) { flex-basis: 30%;}
+    @include breakpoint(t) { flex-basis: 35%;}
+    @include breakpoint(m) { flex-basis: 100%;}
+    .work-image {
+      display: flex;
+      flex-direction: column;
+      box-shadow: $box-shadow;
+      cursor: pointer;
+      transition: transform .5s, filter 0.5s ease-in-out;
+      filter: grayscale(100%);
+      &:hover {
+        filter: none;
+      }
+      :hover.image {
+        opacity: 0.7;
+      }
+
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+      }
+    }
+
+    .work-title {
+      padding: 10px;
+      font-size: $about-section-font-size;
+      font-weight: $about-section-font-weight;
+      text-align: center;
+    }
+  }
+}

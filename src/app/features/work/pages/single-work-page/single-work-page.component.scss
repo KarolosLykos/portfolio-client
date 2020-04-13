@@ -1,0 +1,62 @@
+@import "src/styles/styles";
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.single-work-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+
+  @include breakpoint(m) {
+    flex-direction: column-reverse;
+  }
+
+  .single-work-images {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    flex-basis: 60%;
+
+    .single-work-image {
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .single-work-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    flex-basis: 40%;
+
+    .single-work-title {
+      font-size: $single-work-title-size;
+      font-weight: $single-work-title-weight;
+      padding: 10px;
+    }
+
+    .single-work-description {
+      font-size: $single-work-description-size;
+      font-weight: $single-work-description-weight;
+      text-indent: $about-section-description-indent;
+    }
+  }
+}
+
+
+//<h4 class="title">{{ title }}</h4>
+//
+//<div class="single-work-wrapper">
+//<div class="single-work-images">
+//<div *ngFor="let image of images" class="single-work-image">
+//<img src="{{image.url}}" alt="" class="single-work-image-img">
+//</div>
+//</div>
+//<div class="single-work-section">
+//<div class="single-work-title"> {{ title }}</div>
+//<div class="single-work-description"> {{ description }}</div>
+//</div>
+//</div>

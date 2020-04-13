@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700');
+@import "./variables";
+@import "./mixins";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+html {
+  background-color: $body-bg;
+}
+
+body {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 75px;
+  @include breakpoint(m) {
+    overflow-x: hidden;
+  }
+}
+
+.title {
+  color: $title-color;
+  font-size: $title-size;
+  font-family: $font-family;
+  line-height: $title-line-height;
+  text-transform: uppercase;
+  letter-spacing: $title-letter-spacing;
+  font-weight: $title-font-weight;
+  text-decoration: underline;
+  padding: 10px;
+}
+

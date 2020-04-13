@@ -1,0 +1,19 @@
+@mixin breakpoint($device) {
+  @if $device == m {
+    @media screen and(max-width: 939px) {
+      @content;
+    }
+  } @else if $device == t {
+    @media screen and(min-width: 940px) and (max-width: 1022px) {
+      @content;
+    }
+  } @else if $device == l {
+    @media screen and(min-width: 1023px) and (max-width: 1280px) {
+      @content;
+    }
+  } @else if $device == d {
+    @media screen and(min-width: 1281px) {
+      @content;
+    }
+  }
+}

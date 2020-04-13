@@ -1,0 +1,31 @@
+<nav >
+  <div class="logo">
+    <h4 class="logo-header">Logo placeholder</h4>
+  </div>
+  <div class="logo-m">
+    <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo4.png" alt="">
+  </div>
+  <ul class="nav-links" [ngClass]="isExpanded ? 'expanded' : ''">
+    <li class="nav-links-item" routerLink="/work"
+        [routerLinkActive]="'active'">
+      Work
+    </li>
+    <li class="nav-links-item" routerLink="/about"
+        [routerLinkActive]="'active'">
+      About
+    </li>
+    <li class="nav-links-item" routerLink="/contact"
+        [routerLinkActive]="'active'">
+      Contact
+    </li>
+<!--    <li class="nav-links-item" routerLink="/newsletter"-->
+<!--        [routerLinkActive]="'active'">-->
+<!--      Newsletter-->
+<!--    </li>-->
+  </ul>
+  <div class="burger" [ngClass]="isExpanded ? 'expanded' : ''" (click)="onToggle()">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>

@@ -1,0 +1,13 @@
+<h4 class="title">{{ title }}</h4>
+
+<div class="single-work-wrapper">
+  <div class="single-work-images">
+    <div *ngFor="let image of images" class="single-work-image">
+      <img src="{{image.url}}" alt="" class="single-work-image-img">
+    </div>
+  </div>
+  <div class="single-work-section">
+    <div class="single-work-title"> {{ title }}</div>
+    <div class="single-work-description"> {{ description }}</div>
+  </div>
+</div>

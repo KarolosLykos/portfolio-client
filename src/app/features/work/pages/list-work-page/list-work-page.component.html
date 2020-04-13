@@ -1,0 +1,9 @@
+<div class="work-wrapper">
+  <div *ngFor="let t of test" class="work-item" (click)="showWork(t.id)">
+    <div class="work-image">
+      <img src="{{ t.image }}" alt="" class="image">
+    </div>
+
+    <div class="work-title">{{ t.title }}</div>
+  </div>
+</div>
